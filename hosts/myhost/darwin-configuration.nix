@@ -9,7 +9,7 @@
 
   nixpkgs.overlays = [
     (final: prev: {
-      hello = final.htop;
+      hello = prev.htop;
     })
   ];
 

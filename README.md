@@ -133,6 +133,6 @@ result is `./result/sw/bin/htop`. OK.
 
 ### Conclusion
 
-`nixpkgs.overlays` in `configuration.nix` is not being applied to internal packages.
+The `nixpkgs.overlays` defined in `configuration.nix` is not being applied to internal packages.
 
 Is this my fault or a bug?

@@ -46,7 +46,7 @@ https://github.com/numtide/blueprint/blob/main/docs/configuration.md#nixpkgsover
       inherit inputs;
       nixpkgs.overlays = [
         (final: prev: {
-          hello = final.htop;
+          hello = prev.htop;
         })
       ];
     };
@@ -66,7 +66,7 @@ set `nixpkgs.overlays` in `flake.nix` (global).
       inherit inputs;
       nixpkgs.overlays = [
         (final: prev: {
-          hello = final.htop;
+          hello = prev.htop;
         })
       ];
     };

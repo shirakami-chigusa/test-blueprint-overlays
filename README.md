@@ -19,7 +19,7 @@ This package is designed to test the validity of `nixpkgs.overlays` within packa
 ```nix
 # packages/my-hello/default.nix
 { pkgs, ... }:
-pkgs.stdenvNoCC.mkDerivation {
+pkgs.stdenv.mkDerivation {
   name = "my-hello";
   src = ./.;
 

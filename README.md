@@ -1,6 +1,6 @@
-I'm trying to configure `nixpkgs.overlays` per-host, not globally.
+I'm attempting to configure `nixpkgs.overlays` on a per-host basis, rather than globally.
 
-I confirmed that if `nixpkgs.overlays` is defined in `configuration.nix` instead of directly under `inputs.blueprint` in `flake.nix`, the overlays are not enabled in `packages/<pname>/default.nix`.
+I've confirmed that if `nixpkgs.overlays` is defined in `configuration.nix` instead of directly under `inputs.blueprint` in `flake.nix`, the overlays are not being applied within `packages/<pname>/default.nix`.
 
 ### System Info
 
@@ -14,9 +14,7 @@ I confirmed that if `nixpkgs.overlays` is defined in `configuration.nix` instead
 
 ### packages/my-hello/default.nix
 
-This package is to test whether `nixpkgs.overlays` is valid in the package definition.
-It is simply extracts the `pkgs.hello` as is.
-If `pkgs.hello` is overlaid on `pkgs.htop`, the output will be `htop`.
+This package is designed to test the validity of `nixpkgs.overlays` within package definitions. It simply extracts `pkgs.hello` as is. If `pkgs.hello` is overlaid with `pkgs.htop`, the output will be `htop`.
 
 ```nix
 # packages/my-hello/default.nix

@@ -2,6 +2,16 @@ I'm trying to configure `nixpkgs.overlays` per-host, not globally.
 
 I confirmed that if `nixpkgs.overlays` is defined in `configuration.nix` instead of directly under `inputs.blueprint` in `flake.nix`, the overlays are not enabled in `packages/<pname>/default.nix`.
 
+### System Info
+
+- blueprint: 7ae2142c8b5a47bed6d403fdd5f5a1215961e10c
+- system: `"aarch64-darwin"`
+- host os: `Darwin 24.3.0, macOS 15.3.2`
+- multi-user?: `yes`
+- sandbox: `no`
+- version: `nix-env (Nix) 2.24.12`
+- nixpkgs: `/nix/store/bgkmh40ahkw48wxwmwbilnvjdjgcn3n6-source`
+
 ### packages/my-hello/default.nix
 
 This package is to test whether `nixpkgs.overlays` is valid in the package definition.
